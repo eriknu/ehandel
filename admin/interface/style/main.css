@@ -1,0 +1,414 @@
+/*==============font-faces=============*/
+
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('../fonts/OpenSans-Light-webfont.eot');
+    src: url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Light-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('../fonts/OpenSans-Bold-webfont.eot');
+    src: url('../fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Bold-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Bold-webfont.svg#OpenSansExtrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.clear{
+	clear: both;
+}
+
+
+html{
+	font: 100% 'OpenSansLight', arial, sans-serif;
+	background: #f9fafc;
+	height: 100%;
+	color: #222;
+}
+
+body{height: 100%;}
+
+
+
+table td, table th{
+	padding: 10px;
+	
+}
+
+table th{
+	text-transform: uppercase;	
+	background: #edeff2; 
+}
+
+table td {
+	text-align: center;
+	background: #fff;
+}
+
+table td a{
+	color: #222;
+	text-decoration: none;
+}
+
+
+form input[type=text],form input[type=password]{
+	border: 1px solid #eee;
+	background: #fff;
+	padding: 5px 0;
+	border-radius: 3px;
+	color: #222;
+	outline: none;
+	font-size: 0.9em;
+	margin: 5px 0;
+	font-family: 'OpenSansLight';
+	height: 30px;
+	box-shadow: inset 1px 1px 8px rgba(0, 0, 0, .1);
+	text-indent: 5px;
+	min-width: 300px;
+}
+
+form textarea{
+	width: 500px;
+	height: 200px;
+}
+
+
+
+/*=========messages==========*/
+
+.message{
+	width: 90%;
+	margin: 5px auto;
+	border-radius: 3px;
+	padding: 8px 0;
+	text-indent: 5px;
+	background: #E7FAE6;
+	border: 1px solid #B7CBB6;
+	color: #52964F;
+}
+
+
+	.message i{
+		float: left;
+		margin: 3px 0;
+	}
+
+/*=========basic classes==========*/
+.icon{
+
+}
+
+.bold{
+	font-family: 'OpenSansBold';	
+}
+
+.button{
+	background: #4A525A;
+	color: #eee;
+	border: 1px solid #3b4248;
+	display: inline-block;
+	padding: 5px 10px;
+	cursor: pointer;
+	text-decoration: none;
+	border-radius: 3px;
+	font-size: 1em;
+}
+
+	.button:hover{
+		color: #fff;
+		background: #3b4248;
+	}
+
+
+
+#toolbar{
+	height: 40px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	background: #262626;
+	z-index: 1000;
+	box-shadow: 0px 0px 3px #333;
+}
+
+	#toolbar a.logout{
+		text-decoration: none;
+		float: right;
+		margin: 10px 30px;	
+		margin-left: 10px;
+	}
+	
+	#toolbar a.dashboard{
+		text-decoration: none;
+		float: right;
+		margin: 10px 20px;
+			
+	}
+	
+	#toolbar a{
+		color: #888;
+	}
+	
+	#toolbar a:hover{
+		color: #fff;
+	}
+
+
+.header{
+	background: #4A525A;/*#b7cccc;*/
+	color: #fff;
+	height: 100px;
+	margin-top: 40px;
+}
+
+	.header .main-content{
+		width: 960px;
+		margin: auto;
+		border-left: 1px solid #3b4248;/*#759595;*/
+		border-right: 1px solid #3b4248;/*#759595;*/
+		height: 100px;
+	}
+
+	.header .title a{
+		float: left;
+		margin: 25px 0px 0px 0px;
+		color: white;
+		text-decoration: none;
+		opacity: .7;
+		width: 255px;
+		text-align: center;
+	}
+		.header .title a:hover{
+			opacity: 1;
+		}
+	
+	
+	.header .menu li{
+		display: inline;
+		list-style: none;
+	}
+	
+		.header .menu li a{
+			width: 140px;
+			height: 100px;
+			text-transform: uppercase;
+			border-left: 1px solid #3b4248;
+			text-align: center;
+			float: left;
+			color: #fff;
+			text-decoration: none;
+			opacity: .7;
+			line-height: 30px;
+		}
+		
+		.header .menu li a:hover{
+			opacity: 1;
+		}
+		
+		.header .menu li:last-child a{
+			/*border-right: 1px solid #fff;*/		
+		}
+		
+		
+		.header .menu li a .icon{
+			font-size: 50px;
+			clear: both;
+			float: left;
+			width: 100%;
+			margin-top: 25px;	
+		}
+		
+
+.container{
+	width: 960px;
+	min-height: 100%;
+	margin: auto;
+	border-left: 1px solid #3b4248;
+	border-right: 1px solid #3b4248;
+	
+	padding-top: 50px;
+	
+}
+
+
+/*===========product-editor==============*/
+
+
+
+.prod-editor{
+	width: 90%;
+	margin: auto;
+}
+
+.prod-editor .editor{
+	width: 100%;
+	margin: 10px auto;
+}
+
+.prod-editor .title{
+	width: 100%;
+	margin: 10px auto;
+	display: block;
+	font-size: 1.2em;
+	margin-bottom: 20px;
+}
+
+	.prod-editor .title input{
+		width: 100%;
+		margin: 5px 0;
+		display: block;
+		font-size: 1.2em;
+		border: 1px solid lightGrey;
+	}
+	
+.prod-editor .price{
+
+	margin: 10px auto;
+	font-size: 1.2em;
+	margin-bottom: 20px;
+	float: left;
+}
+
+	.prod-editor .price label{
+		margin-right: 10px;
+	}
+
+	.prod-editor .price input[type=text]{
+		width: 120px;
+		min-width: 120px;
+		margin-right: 10px;
+		margin: 0px 5px;
+		font-size: 1.2em;
+		border: 1px solid lightGrey;
+	}
+	
+.prod-editor .stock{
+	margin: 10px auto;
+	font-size: 1.2em;
+	margin-bottom: 20px;
+	float: left;
+	margin-left: 50px;
+}
+
+	.prod-editor .stock label{
+		margin-right: 10px;
+	}
+
+	.prod-editor .stock input[type=text]{
+		width: 120px;
+		min-width: 120px;
+		margin-right: 10px;
+		margin: 0px 5px;
+		font-size: 1.2em;
+		border: 1px solid lightGrey;
+	}
+
+.publish-controls{
+	width: 100%;
+	margin: 10px auto;
+}
+
+.image-upload{
+	margin: 20px 0;
+	position: relative;
+	display: inline-block;
+}
+	
+	.image-upload .delete-img{
+			position: absolute;
+			top: 20px;
+			right: 0;
+	}
+
+/*===========login-form==============*/
+
+
+.login-box .big-icon{
+	font-size: 5em;
+	text-align: center;
+	color: #ccc;
+	line-height: 95px;
+	border: 5px solid #ccc;
+	width: 100px;
+	height: 100px;
+	display: block;
+	border-radius: 60px;
+	margin: auto;
+	background: #EEE;
+	text-indent: 0px;
+	margin-bottom: 5px;
+}
+
+.login-box{
+	width: 450px;
+	height: 287px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -150px;
+	margin-left: -250px;
+}
+
+	.login-box input{
+		width: 450px;
+		margin: auto;
+		text-align: center;
+		padding: 10px 0;
+	}
+	
+	.login-box input[type=text],
+	.login-box input[type=password]{
+		height: 40px;
+		box-shadow: inset 1px 1px 6px #aaa;
+		font-size: 1.3em;
+	}
+	
+	.login-box .button{
+		font-size: 1.1em;
+		margin-top: 5px;
+	}
+
+
+
+/*===========users==============*/
+
+
+.user-table{
+	margin: auto;
+	
+}
+
+
+/*===========settings-form==============*/
+
+.settings-form{
+	width: 700px;	
+	margin: auto;
+}
+
+.settings-form label{
+	display: block;
+	margin-top: 10px;
+}
+
+	.settings-form .button .icon-large{
+		float: left;
+		margin-top: 3px;
+		margin-right: 4px;
+	}
